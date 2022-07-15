@@ -1,0 +1,39 @@
+<idea-plugin url="https://saumyaroy.com/go-wire-util-goland-plugin">
+
+    <id>com.saumyaroy.gowireutil</id>
+
+    <name>Go Wire Util</name>
+
+    <vendor email="contact@saumyaroy.com" url="https://saumyaroy.com">Saumya Roy</vendor>
+
+    <description><![CDATA[
+        <p>Adds UI menu for Golang dependency injection tool Go Wire</p>
+        <ul>
+        <li>Generates wire_gen.go from wire.go files</li>
+        </ul>
+  ]]></description>
+
+    <depends>com.intellij.modules.goland</depends>
+    <depends>org.jetbrains.plugins.go</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Go Wire Util" displayType="BALLOON"/>
+        <fileType name="Wire File Type"
+        implementationClass="com.saumyaroy.gowireutil.fileType.WireFileType"
+        language="go"
+        fieldName="INSTANCE"
+        fileNames="wire.go;wire_gen.go"
+        />
+
+    </extensions>
+
+    <actions>
+        <group id="com.saumyaroy.gowireutil.GoWireAction" text="Go Wire Util" popup="true" icon="com.saumyaroy.gowireutil.icons.GoWireUtilIcons.GoWireMainLogo">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <action id="com.saumyaroy.gowireintellij.GoWireGenerateAction" class="com.saumyaroy.gowireutil.GoWireUtilGenerateAction"
+                    icon="AllIcons.Actions.Execute"
+                    text="Generate">
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
