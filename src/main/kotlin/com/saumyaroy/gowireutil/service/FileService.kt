@@ -7,6 +7,9 @@ import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.openapi.vfs.VirtualFile
 
+/**
+ * Handles [VirtualFile] operations
+ */
 class FileService(private val event: AnActionEvent) {
 
     fun saveAndRefreshFileChanges() {

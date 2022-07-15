@@ -5,15 +5,15 @@ plugins {
 }
 
 group = "com.saumyaroy"
-version = "0.0.3"
+version = "0.0.6"
 
 repositories {
     mavenCentral()
 }
 
 intellij {
-    version.set("2021.3.5")
     type.set("GO")
+    version.set("2022.1.3")
 
     plugins.set(listOf("org.jetbrains.plugins.go"))
 }
