@@ -1,11 +1,11 @@
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.6.20"
-    id("org.jetbrains.intellij") version "1.6.0"
+    id("org.jetbrains.intellij") version "1.7.0"
 }
 
 group = "com.saumyaroy"
-version = "0.0.6"
+version = "0.0.7"
 
 repositories {
     mavenCentral()
@@ -13,7 +13,7 @@ repositories {
 
 intellij {
     type.set("GO")
-    version.set("2022.1.3")
+    version.set("2022.2")
 
     plugins.set(listOf("org.jetbrains.plugins.go"))
 }
@@ -29,7 +29,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("211.*")
-        untilBuild.set("221.*")
+        untilBuild.set("222.*")
     }
 
     signPlugin {
