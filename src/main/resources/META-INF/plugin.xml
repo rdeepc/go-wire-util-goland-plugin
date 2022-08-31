@@ -22,7 +22,7 @@
         implementationClass="com.saumyaroy.gowireutil.fileType.WireFileType"
         language="go"
         fieldName="INSTANCE"
-        fileNames="wire.go;wire_gen.go"
+        fileNames="wire_gen.go"
         />
 
     </extensions>
