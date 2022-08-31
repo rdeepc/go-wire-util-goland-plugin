@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.saumyaroy"
-version = "0.0.7"
+version = "0.0.8"
 
 repositories {
     mavenCentral()
@@ -13,7 +13,7 @@ repositories {
 
 intellij {
     type.set("GO")
-    version.set("2022.2")
+    version.set("2022.2.2")
 
     plugins.set(listOf("org.jetbrains.plugins.go"))
 }
